@@ -1,7 +1,9 @@
 import { BackgroundNoise } from "@/components/features/backgrounds";
 import Navbar from "@/components/features/navbar";
+import About from "@/components/features/portfolio/about";
+import Contact from "@/components/features/portfolio/contact";
+import { Footer } from "@/components/features/portfolio/footer";
 import { Hero } from "@/components/features/portfolio/hero";
-import HeroStark from "@/components/features/portfolio/hero-stark";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
           <div className="min-h-[calc(100vh-4rem)] md:px-8">
             <div className="min-h-[calc(100vh-4rem)] md:border-r md:border-l">
               <Hero />
-              <HeroStark />
+              <About />
+              <Contact />
+              <Footer />
             </div>
           </div>
         </main>

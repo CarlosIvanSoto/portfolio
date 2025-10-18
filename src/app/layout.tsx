@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { geistMono, geistSans, incognito, pixelifySans } from "@/assets/fonts";
+import { MotionProvider } from "@/components/motion-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <body
         className={cn(
-          'antialiased',
+          'antialiased tron',
           geistSans.variable,
           geistMono.variable,
           incognito.variable,
@@ -30,7 +31,9 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          {children}
+          <MotionProvider>
+            {children}
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>
